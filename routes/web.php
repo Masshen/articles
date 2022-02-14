@@ -21,6 +21,7 @@ use App\Http\Controllers\CategoryController;
 //    return view('welcome');
 //});
 Route::get('/',IndexController::class);
-Route::get('/category/{slug}',CategoryController::class);
+Route::get('/category',[CategoryController::class,'index']);
+Route::get('/category/{id}',[CategoryController::class,'show']);
 Route::get('/tag/{slug}',TagController::class);
 Route::get('/post/{slug}',[PostController::class,'show']);
