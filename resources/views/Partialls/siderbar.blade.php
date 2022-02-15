@@ -1,4 +1,4 @@
-gi<div class="card my-4">
+<div class="card my-4">
     <h5 class="card-header">Catégories</h5>
     <div class="card-body">
         <div class="row">

@@ -9,6 +9,17 @@ use Illuminate\Http\Request;
 
 class IndexController extends Controller
 {
+    public function index()
+    {
+        $site_settings = [
+            'title' =>'Mon premier site avec Laravel',
+            'description' => 'pour la description des articles'
+        ];
+
+        return view('home', [
+            'site_settings' => $site_settings
+        ]);
+    }
     //
     public function __invoke()
     {

@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\TagController;
 use App\Http\Controllers\PostController;
 use App\Http\Controllers\IndexController;
+use App\Http\Controllers\Index1Controller;
 use App\Http\Controllers\CategoryController;
 
 /*
@@ -20,8 +21,10 @@ use App\Http\Controllers\CategoryController;
 //Route::get('/', function () {
 //    return view('welcome');
 //});
-Route::get('/',IndexController::class);
+Route::get('/',[Index1Controller::class,'index']);
 Route::get('/category',[CategoryController::class,'index']);
 Route::get('/category/{id}',[CategoryController::class,'show']);
-Route::get('/tag/{slug}',TagController::class);
+Route::get('/tag',[TagController::class,'index']);
+Route::get('/tag/{slug}',[TagController::class,'show']);
+Route::get('/post',[PostController::class,'index']);
 Route::get('/post/{slug}',[PostController::class,'show']);

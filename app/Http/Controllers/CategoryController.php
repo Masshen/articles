@@ -15,13 +15,13 @@ class CategoryController extends Controller
      */
     public function index(Request $request)
     {
-        //
+
         $list=Category::all();
         return view('index',['lists'=>$list]); //envoie les collections
     }
     public function show($id)
     {
-        $model = Category::find($id);
+        $model = Category::find($id); // envoie un element de la collection
         if($model==null){
             return "l'information n'est pas correcte";
         }
